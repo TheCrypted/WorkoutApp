@@ -2,6 +2,16 @@ let rand = document.getElementById("dynamic-text-inner");
 const attributes = ["Lat Pull-Downs", "Hip Abductions", "Seated Leg Curls", "Chest Presses"]
 let index = 0;
 let wordInd = 0;
+let workOuts = document.getElementsByClassName("workOuts");
+
+for( let workout of workOuts ){
+  workout.addEventListener("mousemove", function(){
+    workout.style.opacity = "100%"
+  })
+  workout.addEventListener("mouseout", function(){
+    workout.style.opacity = "20%"
+  })
+}
 
 let cursorDiv = document.getElementById("cursorBox");
 const move = (e) => setTimeout(function(){
